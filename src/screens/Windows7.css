@@ -1,0 +1,33 @@
+.win7 {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at 50% 45%, #2a4a6b 0%, #16283b 55%, #0a1420 100%);
+  color: #eaf2fb;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.win7__inner {
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.win7__title {
+  margin: 0 0 18px;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-weight: 400;
+}
+
+.win7__percent {
+  margin: 0 0 10px;
+  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  font-weight: 300;
+}
+
+.win7__warn {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.8vw, 1.4rem);
+  font-weight: 300;
+  color: #c4d6ea;
+}

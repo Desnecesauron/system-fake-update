@@ -1,0 +1,62 @@
+.ubuntu {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: #2c001e;
+  color: #fff;
+  font-family: Ubuntu, 'Segoe UI', system-ui, sans-serif;
+}
+
+.ubuntu__brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ubuntu__logo {
+  width: clamp(64px, 7vw, 88px);
+  height: auto;
+}
+
+.ubuntu__word {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Cinco pontos pulsando estilo boot do Ubuntu. */
+.ubuntu__dots {
+  display: flex;
+  gap: 14px;
+}
+
+.ubuntu__dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e95420;
+  animation: ubuntu-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes ubuntu-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.ubuntu__caption {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+  font-weight: 300;
+  color: #d9c7d2;
+}

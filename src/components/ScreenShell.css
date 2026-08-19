@@ -1,0 +1,94 @@
+.shell-launch {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 30%, #1a2030, #07090e);
+  padding: 24px;
+}
+
+.shell-launch__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  padding: 40px;
+  max-width: 420px;
+  background: rgba(21, 25, 36, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.shell-launch__card h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.shell-launch__card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.shell-launch__card button {
+  margin-top: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  transition: filter 0.15s ease;
+}
+
+.shell-launch__card button:hover {
+  filter: brightness(1.12);
+}
+
+.shell-launch__hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.shell-launch__hint kbd {
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: #0d1017;
+  font-family: monospace;
+}
+
+.shell-stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  cursor: none;
+}
+
+.shell-exit-hint {
+  position: fixed;
+  right: 10px;
+  bottom: 8px;
+  z-index: 9999;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0;
+  animation: shell-hint-fade 6s ease forwards;
+}
+
+@keyframes shell-hint-fade {
+  0%,
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,59 @@
+.bsod {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8vw;
+  background: #0078d7;
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.bsod__inner {
+  max-width: 900px;
+}
+
+.bsod__face {
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+
+.bsod__lead {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 300;
+  line-height: 1.35;
+  margin: 0 0 26px;
+}
+
+.bsod__progress {
+  font-size: clamp(1rem, 1.7vw, 1.4rem);
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+.bsod__more {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.bsod__qr {
+  flex: none;
+  width: 110px;
+  height: 110px;
+  background: #fff;
+  padding: 6px;
+}
+
+.bsod__more-text {
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.bsod__more-text p {
+  margin: 0 0 14px;
+}

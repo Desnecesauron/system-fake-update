@@ -1,0 +1,72 @@
+.winxp {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #5a7edc 0%, #3a6ea5 100%);
+  color: #fff;
+  font-family: Tahoma, 'Segoe UI', system-ui, sans-serif;
+}
+
+.winxp__inner {
+  text-align: center;
+  min-width: min(440px, 80vw);
+}
+
+.winxp__title {
+  margin: 0 0 24px;
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+}
+
+/* Barra XP: track hollow com um bloco azul que corre em loop. */
+.winxp__bar {
+  margin: 0 auto 22px;
+  width: 320px;
+  max-width: 80vw;
+}
+
+.winxp__bar-track {
+  position: relative;
+  height: 20px;
+  border: 1px solid #1f3f66;
+  border-radius: 3px;
+  background: #dfe9fb;
+  overflow: hidden;
+}
+
+.winxp__bar-chunk {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 0;
+  width: 84px;
+  border-radius: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #3f7bd6 0,
+    #3f7bd6 8px,
+    #2f66bd 8px,
+    #2f66bd 12px
+  );
+  animation: winxp-run 1.6s linear infinite;
+}
+
+@keyframes winxp-run {
+  0% {
+    left: -84px;
+  }
+  100% {
+    left: 320px;
+  }
+}
+
+.winxp__step {
+  margin: 0 0 8px;
+  font-size: clamp(0.95rem, 1.8vw, 1.3rem);
+}
+
+.winxp__warn {
+  margin: 0;
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  color: #dbe6fb;
+}
