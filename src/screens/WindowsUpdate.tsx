@@ -2,7 +2,7 @@ import { useFakeProgress } from '../hooks/useFakeProgress'
 import './WindowsUpdate.css'
 
 export function WindowsUpdate() {
-  const progress = useFakeProgress({ stallAt: 88 })
+  const progress = useFakeProgress()
 
   return (
     <div className="win-update">
@@ -11,10 +11,13 @@ export function WindowsUpdate() {
           <span key={i} style={{ animationDelay: `${i * 0.16}s` }} />
         ))}
       </div>
-      <p className="win-update__title">
-        Working on updates {Math.floor(progress)}%
+      <p className="win-update__title">Working on updates</p>
+      <p className="win-update__percent">
+        {Math.floor(progress)}% complete
       </p>
-      <p className="win-update__subtitle">Don't turn off your PC.</p>
+      <p className="win-update__subtitle">
+        Don't turn off your PC. This will take a while.
+      </p>
     </div>
   )
 }

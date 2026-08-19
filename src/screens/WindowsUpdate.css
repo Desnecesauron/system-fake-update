@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 34px;
-  background: #0078d7;
+  gap: 18px;
+  background: #0067b8;
   color: #fff;
   font-family: 'Segoe UI', system-ui, sans-serif;
 }
@@ -16,6 +16,7 @@
   position: relative;
   width: 64px;
   height: 64px;
+  margin-bottom: 18px;
 }
 
 .win-update__spinner span {
@@ -48,12 +49,19 @@
 
 .win-update__title {
   margin: 0;
-  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  font-weight: 400;
+}
+
+.win-update__percent {
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 400;
 }
 
 .win-update__subtitle {
-  margin: 0;
-  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  margin: 8px 0 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
   font-weight: 400;
+  opacity: 0.92;
 }
