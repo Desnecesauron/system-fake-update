@@ -1,11 +1,13 @@
-import { OsIcon } from '../components/OsIcon'
+import { UbuntuMark } from '../components/OsIcon'
 import './Ubuntu.css'
 
 export function Ubuntu() {
   return (
     <div className="ubuntu">
       <div className="ubuntu__brand">
-        <OsIcon kind="ubuntu" className="ubuntu__logo" />
+        <svg className="ubuntu__logo" viewBox="0 0 100 100" aria-hidden>
+          <UbuntuMark color="#ffffff" gap="#2c001e" />
+        </svg>
         <span className="ubuntu__word">ubuntu</span>
       </div>
 

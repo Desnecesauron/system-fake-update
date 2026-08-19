@@ -41,21 +41,36 @@ export function OsIcon({ kind, className }: Props) {
       )
 
     case 'ubuntu':
+      // Tile laranja com o circle-of-friends branco (marca oficial).
       return (
         <svg className={className} viewBox="0 0 100 100" aria-hidden>
-          <circle cx="50" cy="50" r="42" fill="none" stroke="#e95420" strokeWidth="5" />
-          <g stroke="#e95420" strokeWidth="5">
-            <line x1="50" y1="50" x2="50" y2="16" />
-            <line x1="50" y1="50" x2="21" y2="66" />
-            <line x1="50" y1="50" x2="79" y2="66" />
-          </g>
-          <g fill="#e95420">
-            <circle cx="50" cy="14" r="10" />
-            <circle cx="19" cy="67" r="10" />
-            <circle cx="81" cy="67" r="10" />
-          </g>
-          <circle cx="50" cy="50" r="11" fill="#e95420" stroke="#2c001e" strokeWidth="3" />
+          <rect width="100" height="100" rx="8" fill="#dd4814" />
+          <UbuntuMark color="#ffffff" gap="#dd4814" />
         </svg>
       )
   }
+}
+
+/**
+ * Circle-of-friends do Ubuntu (ring + hub + três nós ligados por raios).
+ * Nós posicionados como na marca oficial: superior-direito, esquerda e
+ * inferior-direito. `gap` é a cor de fundo, usada para separar os nós do ring.
+ */
+export function UbuntuMark({ color, gap }: { color: string; gap: string }) {
+  return (
+    <>
+      <circle cx="50" cy="50" r="27" fill="none" stroke={color} strokeWidth="5" />
+      <g stroke={color} strokeWidth="6">
+        <line x1="50" y1="50" x2="65" y2="24" />
+        <line x1="50" y1="50" x2="20" y2="50" />
+        <line x1="50" y1="50" x2="65" y2="76" />
+      </g>
+      <g fill={color} stroke={gap} strokeWidth="3.5">
+        <circle cx="65" cy="24" r="9.5" />
+        <circle cx="20" cy="50" r="9.5" />
+        <circle cx="65" cy="76" r="9.5" />
+        <circle cx="50" cy="50" r="9.5" />
+      </g>
+    </>
+  )
 }
