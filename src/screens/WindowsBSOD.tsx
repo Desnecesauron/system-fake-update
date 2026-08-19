@@ -3,7 +3,7 @@ import { FakeQR } from '../components/FakeQR'
 import './WindowsBSOD.css'
 
 export function WindowsBSOD() {
-  const progress = useFakeProgress({ stallAt: 92, maxStep: 0.9 })
+  const progress = useFakeProgress()
 
   return (
     <div className="bsod">

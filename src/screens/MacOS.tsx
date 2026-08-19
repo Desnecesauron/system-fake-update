@@ -2,7 +2,7 @@ import { useFakeProgress } from '../hooks/useFakeProgress'
 import './MacOS.css'
 
 export function MacOS() {
-  const progress = useFakeProgress({ stallAt: 80, maxStep: 1.1 })
+  const progress = useFakeProgress()
 
   return (
     <div className="macos">

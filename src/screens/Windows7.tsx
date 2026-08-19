@@ -2,7 +2,7 @@ import { useFakeProgress } from '../hooks/useFakeProgress'
 import './Windows7.css'
 
 export function Windows7() {
-  const progress = useFakeProgress({ stallAt: 85, intervalMs: 420 })
+  const progress = useFakeProgress()
 
   return (
     <div className="win7">
