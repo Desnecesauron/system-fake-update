@@ -1,33 +1,96 @@
 .win7 {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(180deg, #16324f 0%, #0d1f33 100%);
-  color: #eaf2fb;
+  overflow: hidden;
+  color: #fff;
   font-family: 'Segoe UI', system-ui, sans-serif;
+  /* Brilho à direita + degradê azul do wallpaper padrão do Windows 7. */
+  background:
+    radial-gradient(
+      circle at 74% 60%,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(190, 230, 248, 0.45) 16%,
+      rgba(120, 190, 230, 0) 40%
+    ),
+    linear-gradient(135deg, #1a5c9e 0%, #2f80bf 46%, #63bce6 100%);
 }
 
-.win7__inner {
+.win7__streaks {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.win7__center {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* Throbber circular do Windows 7. */
+.win7__spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  animation: win7-spin 0.9s linear infinite;
+}
+
+@keyframes win7-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.win7__text {
   text-align: center;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.win7__title {
-  margin: 0 0 18px;
-  font-size: clamp(1.4rem, 3vw, 2.4rem);
-  font-weight: 400;
-}
-
-.win7__percent {
-  margin: 0 0 10px;
-  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
-  font-weight: 300;
-}
-
-.win7__warn {
+.win7__text p {
   margin: 0;
-  font-size: clamp(0.95rem, 1.8vw, 1.4rem);
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.win7__brand {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.win7__flag {
+  width: 26px;
+  height: 26px;
+  align-self: center;
+}
+
+.win7__brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.win7__brand-seven {
+  font-size: 1.5rem;
   font-weight: 300;
-  color: #c4d6ea;
+}
+
+.win7__brand-edition {
+  font-size: 1rem;
+  font-weight: 300;
+  align-self: center;
 }
