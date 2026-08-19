@@ -11,11 +11,9 @@ export function Ubuntu() {
 
       <div className="ubuntu__dots" aria-hidden>
         {Array.from({ length: 5 }).map((_, i) => (
-          <span key={i} style={{ animationDelay: `${i * 0.15}s` }} />
+          <span key={i} style={{ animationDelay: `${i * 0.18}s` }} />
         ))}
       </div>
-
-      <p className="ubuntu__caption">Installing updates… do not power off.</p>
     </div>
   )
 }
