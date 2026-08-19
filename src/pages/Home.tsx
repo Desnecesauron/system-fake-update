@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { SCREENS } from '../screens/registry'
+import { OsIcon } from '../components/OsIcon'
 import './Home.css'
 
 export function Home() {
@@ -22,7 +23,7 @@ export function Home() {
             className="card"
             style={{ '--card-accent': s.accent } as React.CSSProperties}
           >
-            <span className="card__dot" />
+            <OsIcon kind={s.icon} className="card__icon" />
             <span className="card__title">{s.title}</span>
             <span className="card__subtitle">{s.subtitle}</span>
           </Link>

@@ -10,7 +10,7 @@ export function ScreenPage() {
 
   const Screen = screen.component
   return (
-    <ScreenShell title={screen.title}>
+    <ScreenShell title={screen.title} icon={screen.icon} accent={screen.accent}>
       <Screen />
     </ScreenShell>
   )

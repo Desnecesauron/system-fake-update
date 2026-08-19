@@ -66,11 +66,11 @@
   border-color: var(--card-accent, var(--accent));
 }
 
-.card__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--card-accent, var(--accent));
+.card__icon {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 4px;
+  color: var(--card-accent, var(--accent));
 }
 
 .card__title {

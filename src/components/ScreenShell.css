@@ -21,9 +21,76 @@
   backdrop-filter: blur(6px);
 }
 
+.shell-launch__back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 9px 16px;
+  font-size: 0.9rem;
+  color: var(--fg);
+  background: rgba(21, 25, 36, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.15s ease;
+}
+
+.shell-launch__back:hover {
+  border-color: var(--accent);
+}
+
+.shell-launch__icon {
+  width: 52px;
+  height: 52px;
+  color: var(--accent);
+}
+
 .shell-launch__card h1 {
   margin: 0;
   font-size: 1.6rem;
+}
+
+.shell-launch__speed {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.shell-launch__speed-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+
+.shell-launch__speed-opts {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.shell-launch__speed-btn {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  color: var(--fg);
+  background: #0d1017;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.shell-launch__speed-btn:hover {
+  border-color: var(--accent);
+}
+
+.shell-launch__speed-btn.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
 }
 
 .shell-launch__card p {
@@ -31,7 +98,7 @@
   color: var(--muted);
 }
 
-.shell-launch__card button {
+.shell-launch__start {
   margin-top: 8px;
   padding: 12px 28px;
   font-size: 1rem;
@@ -43,7 +110,7 @@
   transition: filter 0.15s ease;
 }
 
-.shell-launch__card button:hover {
+.shell-launch__start:hover {
   filter: brightness(1.12);
 }
 

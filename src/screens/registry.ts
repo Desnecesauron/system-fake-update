@@ -1,4 +1,5 @@
 import type { ComponentType } from 'react'
+import type { OsKind } from '../components/OsIcon'
 import { WindowsUpdate } from './WindowsUpdate'
 import { WindowsXP } from './WindowsXP'
 import { Windows7 } from './Windows7'
@@ -15,6 +16,8 @@ export interface ScreenMeta {
   subtitle: string
   /** Cor de destaque do card */
   accent: string
+  /** Ícone do sistema */
+  icon: OsKind
   /** Componente da tela fullscreen */
   component: ComponentType
 }
@@ -25,6 +28,7 @@ export const SCREENS: ScreenMeta[] = [
     title: 'Windows Update',
     subtitle: 'Working on updates — Windows 10/11',
     accent: '#0078d7',
+    icon: 'windows',
     component: WindowsUpdate,
   },
   {
@@ -32,6 +36,7 @@ export const SCREENS: ScreenMeta[] = [
     title: 'Blue Screen of Death',
     subtitle: ':( Your PC ran into a problem',
     accent: '#0078d7',
+    icon: 'windows',
     component: WindowsBSOD,
   },
   {
@@ -39,6 +44,7 @@ export const SCREENS: ScreenMeta[] = [
     title: 'Windows 7',
     subtitle: 'Configuring updates — do not turn off',
     accent: '#1f7ec4',
+    icon: 'windows-classic',
     component: Windows7,
   },
   {
@@ -46,6 +52,7 @@ export const SCREENS: ScreenMeta[] = [
     title: 'Windows XP',
     subtitle: 'Bliss — please wait',
     accent: '#3a6ea5',
+    icon: 'windows-classic',
     component: WindowsXP,
   },
   {
@@ -53,6 +60,7 @@ export const SCREENS: ScreenMeta[] = [
     title: 'macOS',
     subtitle: 'Installing a software update',
     accent: '#555555',
+    icon: 'apple',
     component: MacOS,
   },
   {
@@ -60,6 +68,7 @@ export const SCREENS: ScreenMeta[] = [
     title: 'Ubuntu',
     subtitle: 'Unattended upgrade in progress',
     accent: '#e95420',
+    icon: 'ubuntu',
     component: Ubuntu,
   },
 ]

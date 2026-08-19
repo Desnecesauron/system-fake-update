@@ -1,18 +1,11 @@
+import { OsIcon } from '../components/OsIcon'
 import './Ubuntu.css'
 
 export function Ubuntu() {
   return (
     <div className="ubuntu">
       <div className="ubuntu__brand">
-        <svg className="ubuntu__logo" viewBox="0 0 100 100" aria-label="Ubuntu">
-          <circle cx="50" cy="50" r="46" fill="none" stroke="#e95420" strokeWidth="6" />
-          <g fill="#e95420">
-            <circle cx="50" cy="12" r="9" />
-            <circle cx="17" cy="69" r="9" />
-            <circle cx="83" cy="69" r="9" />
-          </g>
-          <circle cx="50" cy="50" r="10" fill="#e95420" />
-        </svg>
+        <OsIcon kind="ubuntu" className="ubuntu__logo" />
         <span className="ubuntu__word">ubuntu</span>
       </div>
 
