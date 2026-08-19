@@ -5,53 +5,53 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 56px;
+  gap: 22px;
   background: #2c001e;
   color: #fff;
   font-family: Ubuntu, 'Segoe UI', system-ui, sans-serif;
 }
 
+/* Wordmark com a marca pequena sobrescrita no canto superior-direito. */
 .ubuntu__brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-}
-
-.ubuntu__logo {
-  width: clamp(96px, 11vw, 132px);
-  height: auto;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
 }
 
 .ubuntu__word {
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 300;
   letter-spacing: 1px;
+  line-height: 1;
 }
 
-/* Cinco pontos em onda, estilo boot/plymouth do Ubuntu. */
+.ubuntu__mark {
+  width: clamp(20px, 2.4vw, 28px);
+  height: auto;
+  margin-left: 4px;
+  margin-top: 0.15em;
+}
+
+/* Cinco dots que enchem de laranja da esquerda para a direita (progresso). */
 .ubuntu__dots {
   display: flex;
-  gap: 16px;
+  gap: 14px;
 }
 
 .ubuntu__dots span {
-  width: 13px;
-  height: 13px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #e95420;
-  animation: ubuntu-wave 1.4s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.35);
+  animation: ubuntu-fill 1.8s ease-in-out infinite;
 }
 
-@keyframes ubuntu-wave {
+@keyframes ubuntu-fill {
   0%,
-  60%,
   100% {
-    opacity: 0.28;
-    transform: scale(0.72);
+    background: rgba(255, 255, 255, 0.35);
   }
-  30% {
-    opacity: 1;
-    transform: scale(1);
+  35% {
+    background: #e95420;
   }
 }

@@ -5,10 +5,10 @@ export function Ubuntu() {
   return (
     <div className="ubuntu">
       <div className="ubuntu__brand">
-        <svg className="ubuntu__logo" viewBox="0 0 100 100" aria-hidden>
+        <span className="ubuntu__word">ubuntu</span>
+        <svg className="ubuntu__mark" viewBox="0 0 100 100" aria-hidden>
           <UbuntuMark color="#ffffff" gap="#2c001e" />
         </svg>
-        <span className="ubuntu__word">ubuntu</span>
       </div>
 
       <div className="ubuntu__dots" aria-hidden>
