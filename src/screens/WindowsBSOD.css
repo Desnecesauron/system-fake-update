@@ -42,10 +42,8 @@
 
 .bsod__qr {
   flex: none;
-  width: 110px;
-  height: 110px;
-  background: #fff;
   padding: 6px;
+  background: #fff;
 }
 
 .bsod__more-text {

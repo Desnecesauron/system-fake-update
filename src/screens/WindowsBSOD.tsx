@@ -1,5 +1,5 @@
+import { QRCodeSVG } from 'qrcode.react'
 import { useFakeProgress } from '../hooks/useFakeProgress'
-import { FakeQR } from '../components/FakeQR'
 import './WindowsBSOD.css'
 
 export function WindowsBSOD() {
@@ -16,7 +16,14 @@ export function WindowsBSOD() {
         <p className="bsod__progress">{Math.floor(progress)}% complete</p>
 
         <div className="bsod__more">
-          <FakeQR className="bsod__qr" />
+          <QRCodeSVG
+            className="bsod__qr"
+            value="https://www.windows.com/stopcode"
+            size={112}
+            bgColor="#ffffff"
+            fgColor="#000000"
+            level="M"
+          />
           <div className="bsod__more-text">
             <p>
               For more information about this issue and possible fixes, visit
