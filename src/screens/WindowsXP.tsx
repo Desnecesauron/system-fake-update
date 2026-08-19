@@ -30,7 +30,7 @@ export function WindowsXP() {
           Installing update {current} of {total}...
         </p>
         <p className="winxp__warn">
-          Do not turn off or unplug your computer.
+          Please do not unplug or shutdown your computer.
         </p>
       </div>
     </div>

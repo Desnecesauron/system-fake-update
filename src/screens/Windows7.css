@@ -3,7 +3,7 @@
   inset: 0;
   display: grid;
   place-items: center;
-  background: radial-gradient(ellipse at 50% 45%, #2a4a6b 0%, #16283b 55%, #0a1420 100%);
+  background: linear-gradient(180deg, #16324f 0%, #0d1f33 100%);
   color: #eaf2fb;
   font-family: 'Segoe UI', system-ui, sans-serif;
 }
